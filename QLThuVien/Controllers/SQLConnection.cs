@@ -19,7 +19,7 @@ namespace QLKho.Controller
 
         private SqlConnect() { }
 
-        public static string connectionString = @"Data Source=MRMRKAY\SQLEXPRESS;Initial Catalog=QLKHO;Integrated Security=True";
+        public static string connectionString = @"Data Source=sky_computer\sqlexpress02;Initial Catalog=QLThuVien;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {
