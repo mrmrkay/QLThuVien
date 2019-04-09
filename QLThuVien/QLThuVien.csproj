@@ -33,7 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,6 +58,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityState.cs" />
+    <Compile Include="Models\Reader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControlls\ucAccount.cs">
@@ -79,11 +86,11 @@
     <Compile Include="UserControlls\ucHelp.Designer.cs">
       <DependentUpon>ucHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlls\ucSearch.cs">
+    <Compile Include="UserControlls\ucReader.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlls\ucSearch.Designer.cs">
-      <DependentUpon>ucSearch.cs</DependentUpon>
+    <Compile Include="UserControlls\ucReader.Designer.cs">
+      <DependentUpon>ucReader.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -110,9 +117,11 @@
     <EmbeddedResource Include="UserControlls\ucHelp.resx">
       <DependentUpon>ucHelp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlls\ucSearch.resx">
-      <DependentUpon>ucSearch.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlls\ucReader.resx">
+      <DependentUpon>ucReader.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLThuVien.Models.Reader.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,11 +133,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\book.png" />
