@@ -45,7 +45,7 @@ namespace QLThuVien
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ucSearch ucsearch = new ucSearch();
+            ucReader ucsearch = new ucReader();
             AddControlsToPanel(ucsearch);
         }
 
