@@ -19,7 +19,7 @@ namespace QLThuVien.Controller
 
         private SqlConnect() { }
 
-        public static string connectionString = @"Data Source=NVL-PC\SQLEXPRESS;Initial Catalog=QLThuVien;Integrated Security=True";
+        public static string connectionString = @"Data Source=sky_computer\sqlexpress02;Initial Catalog=QLThuVien;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {
