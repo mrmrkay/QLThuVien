@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLKho.Controller
+namespace QLThuVien.Controller
 {
     public class SqlConnect
     {
@@ -19,7 +19,7 @@ namespace QLKho.Controller
 
         private SqlConnect() { }
 
-        public static string connectionString = @"Data Source=MRMRKAY\SQLEXPRESS;Initial Catalog=QLKHO;Integrated Security=True";
+        public static string connectionString = @"Data Source=NVL-PC\SQLEXPRESS;Initial Catalog=QLThuVien;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query)
         {
